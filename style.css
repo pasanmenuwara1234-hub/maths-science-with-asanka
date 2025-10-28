@@ -1,0 +1,70 @@
+/* GENERAL STYLES */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+body { background:#0d0d0d; color:#f0f0f0; line-height:1.6; scroll-behavior:smooth; }
+
+/* HEADER */
+header { background:#111827; display:flex; justify-content:space-between; align-items:center; padding:20px 8%; border-bottom:1px solid #1f2937; position:sticky; top:0; z-index:1000; }
+header .logo { font-size:1.6rem; font-weight:700; color:#00c6ff; text-shadow:0 0 8px #00c6ff; }
+nav ul { list-style:none; display:flex; gap:25px; }
+nav ul li a { text-decoration:none; color:#ddd; font-weight:500; transition:0.3s; }
+nav ul li a:hover, nav ul li a.active { color:#00c6ff; text-shadow:0 0 12px #00c6ff; }
+
+/* HERO SECTION */
+.hero { text-align:center; padding:120px 10% 80px; background:linear-gradient(135deg,#0f0f0f,#1a1a1a); border-bottom:2px solid #00c6ff; }
+.hero h1 { font-size:3rem; color:#00c6ff; margin-bottom:15px; text-shadow:0 0 15px #00c6ff; }
+.hero p { color:#ccc; font-size:1.2rem; margin-bottom:25px; }
+.hero-buttons .btn { display:inline-block; margin:10px 15px 0; background:#00c6ff; color:#000; font-weight:600; padding:14px 32px; border-radius:50px; text-decoration:none; transition:0.3s; }
+.hero-buttons .btn:hover { background:#00eaff; transform:translateY(-4px); box-shadow:0 0 20px #00c6ff; }
+
+/* FEATURES SECTION */
+.features { padding:80px 8%; text-align:center; }
+.features h2 { font-size:2.2rem; color:#00c6ff; margin-bottom:50px; text-shadow:0 0 10px #00c6ff; }
+.feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; }
+.feature-card { background:#151515; border-radius:15px; padding:25px; border:1px solid #222; box-shadow:0 0 15px rgba(0,0,0,0.6); transition:0.4s; }
+.feature-card:hover { transform:translateY(-5px); box-shadow:0 0 25px #00c6ff; border-color:#00c6ff; }
+.feature-card h3 { color:#00c6ff; margin-bottom:15px; }
+.feature-card p { color:#ccc; font-size:1rem; }
+
+/* ABOUT SECTION */
+.about { padding:60px 8%; text-align:center; }
+.about h2 { font-size:2rem; color:#00c6ff; margin-bottom:25px; text-shadow:0 0 10px #00c6ff; }
+.about p { color:#ccc; font-size:1.1rem; max-width:800px; margin:0 auto; }
+
+/* LESSONS SECTION */
+.lessons { padding:60px 8%; }
+.lessons h2 { text-align:center; font-size:2rem; margin-bottom:40px; color:#00c6ff; text-shadow:0 0 10px #00c6ff; }
+.lesson-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:30px; }
+.lesson-card { background:#151515; border-radius:15px; padding:20px; border:1px solid #222; box-shadow:0 0 15px rgba(0,0,0,0.6); transition:0.4s; }
+.lesson-card:hover { transform:translateY(-5px); box-shadow:0 0 25px #00c6ff; border-color:#00c6ff; }
+.lesson-card h3 { color:#00c6ff; margin-bottom:10px; font-size:1.2rem; }
+.lesson-card iframe { margin-bottom:10px; border-radius:10px; }
+.lesson-card a { display:inline-block; background:#00c6ff; color:#000; font-weight:600; padding:8px 15px; border-radius:10px; text-decoration:none; transition:0.3s; }
+.lesson-card a:hover { background:#00eaff; transform:translateY(-2px); }
+
+/* FOOTER */
+footer { text-align:center; padding:25px 0; background:#111; border-top:1px solid #00c6ff; color:#888; font-size:0.9rem; }
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero h1 { font-size:2.5rem; }
+  .features h2, .lessons h2 { font-size:2rem; }
+}
+
+@media(max-width:768px){
+  header { flex-direction:column; text-align:center; }
+  nav ul { flex-direction:column; gap:10px; margin-top:10px; }
+  .hero h1 { font-size:2.2rem; }
+  .hero p { font-size:1.1rem; }
+  .hero-buttons .btn { padding:12px 28px; margin:8px; }
+  .features { padding:60px 5%; }
+  .about { padding:40px 5%; }
+  .lessons { padding:40px 5%; }
+  .lesson-card iframe { height:180px; }
+}
+
+@media(max-width:480px){
+  .hero h1 { font-size:1.8rem; }
+  .hero p { font-size:1rem; }
+  .feature-card h3, .lesson-card h3 { font-size:1rem; }
+  .feature-card p, .lesson-card a { font-size:0.9rem; }
+}
